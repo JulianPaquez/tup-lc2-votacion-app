@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+
+* {
+    font-family: 'Roboto';
+  
+}
+.sec.titulo{
+    display: flex;
+    align-items: center;
+
+}
+
+.imagen-electoral{
+    margin-left: 500px;
+    margin-right: 10px;
+    margin-top: 30px;
+    
+
+}
+
+.linkpaso-header{
+    text-decoration: none;
+}
+
+.linkinformes-header{
+    text-decoration: none;
+}
+
+.linkgenerales-header{
+    text-decoration: none;
+}
+
+.linkpaso-header:hover{
+    background-color: #333;
+}
+
+.linkgenerales-header:hover{
+    background-color: #333;
+    
+}
+
+.linkinformes-header:hover{
+    background-color: #333;
+    border-style: none;
+}
+
+
+.sec-titulo{
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.large-text {
+    display: flex;
+    flex-basis: 45%; 
+    margin-right: 20px; 
+    
+}
+
+.imagen-electoral img {
+    margin: 15px;
+    max-width: 350px;
+    width: 350px;
+    height: auto;
+}
+
+.sec-contenido{
+    margin-left: 100px;
+}
+
+footer{
+    background-color: rgb(59, 59, 59);
+    color: rgb(99, 96, 96);
+    display: flex;
+    padding: 40px;
+    
+}
+
+.Ministerio{
+    width: 150px;
+    height: 45px;
+}
+
+.logoFooter{
+    width: 150px;
+    height: 45px;
+}
+
+.logos{
+    width: 150px;
+    height: 45px;
+}
+
+h4{
+    flex-direction: row-reverse;
+    font-size: 15px;
+}
+
+
+
+.paso-generales3{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+
+}
+
+.paso-generales{
+    background-color: magenta;
+    border-radius: 10px;
+    margin: 25px;
+    width: 400px;
+    height: 100px;
+    padding: 1rem;
+    font: #FFF;
+    font-size: 28px;
+    
+
+}
+
+.paso-generales2{
+    background-color: skyblue;
+    border-radius: 10px;
+    margin: 25px;
+    width: 400px;
+    height: 100px;
+    padding: 1rem;
+    font: #FFF;
+    font-size: 28px;
+}
+
+.section-linkpaso{
+    text-decoration: none;
+    color: white;
+}
+
+.section-linkgenerales{
+    text-decoration: none;
+    color: white;
+}
+

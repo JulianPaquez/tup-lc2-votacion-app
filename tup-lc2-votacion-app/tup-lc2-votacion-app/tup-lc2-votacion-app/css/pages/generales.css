@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+
+* {
+    font-family: 'Roboto';
+  
+}
+
+header {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-menu {
+    background-color: #333;
+    display: block;
+    justify-content: space-around;
+    padding: 1px;
+}
+
+.container-logo {
+    display: flex;
+    background-color: rgb(76, 141, 214);
+    height: auto;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+header li {
+    display: inline-block;
+    list-style: none;
+    padding: auto;
+    justify-content: center;
+}
+
+header .container-menu .menu-nav select {
+    background-color: #333;
+    border: none;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: medium;
+    appearance: none;
+    width: 50px;
+    margin-bottom: auto;
+}
+
+#filtrar {
+    background-color: #c8d0d9;
+    color: #fff;
+    border: none;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px 5px;
+    color: #333;
+    width: 100px;
+    cursor: pointer;
+    font-size: 10px;
+
+}
+
+header .container-menu .menu-nav ul .boton-informes {
+    background-color: #333;
+    color: #fff;
+    border: solid;
+    text-align: center;
+    border-radius: 50px;
+    padding: 8px 30px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 10px;
+    border-width: 1px;
+    margin-left: 10px;
+}
+
+header .container-menu .menu-nav ul .boton-inicio {
+    background-color: hsla(0, 0%, 100%, 0.63);
+    color: black;
+    font-weight: 800;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 35px;
+    font-size: small;
+    margin-left: 560px;
+    text-decoration: none;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+/*ul li :last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#lupa{
+    font-size: small;
+    position: absolute;
+    left: 8px;
+
+}*/
+
+#distrito {
+    width: auto;
+}
+
+body {
+    background-color: rgba(201, 243, 229, 0.963);
+}
+
+main p {
+    color: rgb(0, 0, 253);
+}
+
+#sec-titulo {
+    margin-left: 20px;
+}
+
+.add-informe {
+    background-color: hsla(0, 1%, 51%, 0.923);
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 35px;
+    font-size: small;
+    margin-right: 100px;
+    text-decoration: none;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+
+.paso-generales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+h4 {
+    font-weight: 1000;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+
+}
+
+.mesas-computadas {
+    background-color: rgb(75, 193, 240);
+    padding: 30px 30px;
+}
+
+.electores {
+    background-color: rgb(236, 55, 181);
+    padding: 30px 50px;
+}
+
+.part {
+    background-color: rgb(158, 51, 240);
+    padding: 30px 50px;
+}
+
+.cuadro-agrupacion {
+    display: grid;
+
+    background-color: #fff;
+}
+
+footer {
+    background-color: rgb(59, 59, 59);
+    color: rgb(99, 96, 96);
+    display: block;
+    padding: 20px;
+
+}
+
+.Ministerio {
+    width: 150px;
+    height: 45px;
+}
+
+.logoFooter {
+    width: 150px;
+    height: 45px;
+}
+
+.logos {
+    width: 150px;
+    height: 45px;
+}
+
+h4 {
+    flex-direction: row-reverse;
+    font-size: 15px;
+}
+
+.menu-nav ul li i {
+    padding: auto auto;
+    margin: auto;
+}
+
+.cuadro-agrupacion {
+    display: inline-block;
+    justify-content: center;
+    background-color: #fff;
+    border: solid;
+    border-width: 1px;
+    border-color: #333;
+    margin-top: 100px;
+    margin-left: 10px;
+    text-decoration: none;
+    height: 400px;
+    width: 350px;
+    padding: 3rem;
+
+}
+
+.cuadro-agrupacion .corrientes-png {
+    margin-left: 50px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 30px;
+    /* Espaciado entre celdas (en píxeles u otra unidad) */
+}
+
+table caption {
+    font-size: large;
+    font-weight: bold;
+    justify-content: start;
+}
+
+.graficos {
+    position: relative;
+    margin-left: auto;
+    margin-top: -500px;
+    width: 380px;
+    height: 490px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    display: flex;
+    justify-content: initial;
+}
+
+.bar {
+    flex-grow: 1;
+    background-color: #3498db;
+    margin: 0 5px;
+    transition: height 0.5s, background-color 0.5s;
+}
+
+.bar:hover {
+    background-color: #2980b9;
+}

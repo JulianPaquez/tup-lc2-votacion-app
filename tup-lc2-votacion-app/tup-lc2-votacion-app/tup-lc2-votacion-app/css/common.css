@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+
+* {
+    font-family: 'Roboto';
+  
+}
+body{
+    margin: 0;
+    padding: 0%;
+}
+
+.headerprincipal{
+    background-color: rgb(76, 141, 214);
+
+}
+
+.logo{
+    background-color: rgb(76, 141, 214);
+    width: 200px;
+    height: 50px;
+    padding: 1%;
+    margin-left: 20px;
+}
+
+.header-low{
+    background-color: #333;
+    padding: 5px;
+}
+.consultar-header{
+    color: white;
+    font: #FFF;
+
+}
+
+.linkpaso-header{
+    color: white;
+    background-color: magenta;
+    background-size: 110%;
+    border-radius: 5px;
+    padding: 5px;
+    font: #FFF;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 10px;
+    
+    
+    
+}
+
+.linkgenerales-header{
+    color: white;
+    background-color: skyblue;
+    border-radius: 5px;
+    padding: 5px;
+    font: #FFF;
+    font-size: 12px;
+    margin-right: 10px;
+
+}
+
+.linkinformes-header{
+    color: white;
+    background-color: #333;
+    border-radius: 15px;
+    border-color: white;
+    border-width: 1px;
+    padding: 5px;
+    font: #FFF;
+    font-size: 10px;
+    border-style: solid;
+
+
+}
+

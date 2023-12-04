@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Publicación de Resultados Electorales</title>
+    <link rel="shortcut icon" type="image/png" href="img/icons/favicon-16x16.png">
+    <script src="https://kit.fontawesome.com/2e7d0dec67.js" crossorigin="anonymous"></script>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/generales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous" eferrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+    <header>
+        <!--Barra de logo portal-->
+        <div class="container-logo">
+            <img src="img/icons/Logo_DINE_negativo.a88f983e.png" alt="logo" class="logo">
+        </div>
+
+        <div class="container-menu">
+
+            <nav class="menu-nav">
+                <ul>
+                    <li>
+                        <select name="año" id="año">
+                            <option>Año</option>
+                        </select>
+                        <span><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></span>
+                    </li>
+
+                    <li>
+                        <select name="cargo" id="cargo">
+                            <option>Cargo</option>
+                        </select>
+                        <span><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></span>
+                    </li>
+
+                    <li>
+                        <select name="distrito" id="distrito">
+                            <option>Distrito </option>
+                        </select>
+                        <span><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></span>
+                    </li>
+
+                    <input type="text" id="filtrar" name="filtrar" placeholder="FILTRAR">
+
+                    <a href="informes.html" class="boton-informes">INFORMES</a>
+
+                    <a href="index.html" class="boton-inicio">INICIO</a>
+                </ul>
+
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <section id="sec-titulo">
+            <!--Seccion para agregar una palicula favorita por codigo-->
+            <h2>Elecciones 2021 | Generales</h2>
+            <p>2021 > Generales > Provisorio > Senadores/as Nacionales > Corrientes </p>
+            <br><br>
+        </section>
+
+        <section id="sec-contenido">
+
+            <div class="paso-generales">
+
+                <input type="submit" class="add-informe" value="AGREGAR A INFORMES">
+                
+                <h4 class="mesas-computadas"><b>Mesas computadas</b><br>2.586</h4>
+
+                <h4 class="electores"><b>Electores</b><br>876.580</h4>
+
+                <h4 class="part"><b>Participacion sobre el escrutado</b><br>2.586</h4>
+            </div>
+
+            <div class="sector-main">
+                <div class="cuadro-agrupacion">
+                    <table>
+                        <caption>Agrupaciones Politica</caption>
+                        <tr>
+                            <td>ECO + VAMOS CORRIENTES</td>
+                            <td><img src="img/progress-60.webp" alt="60" width="80px" height="20px"></td>
+                            <td>58.98% <br> 320.678 Votos</td>
+                        </tr>
+                        <tr>
+                            <td>FRENTE DE TODOS</td>
+                            <td><img src="img/progress-30.webp" alt="30" width="80px" height="20px"></td>
+                            <td>36.54% <br> 198.772 Votos</td>
+                        </tr>
+                        <tr>
+                            <td>VAMOS CON VOS</td>
+                            <td><img src="img/progress-2.png" alt="2" width="80px" height="20px"></td>
+                            <td>2.51% <br> 13632 Votos</td>
+                        </tr>
+                        <tr>
+                            <td>COMPROMISO FEDERAL</td>
+                            <td><img src="img/progress-2.png" alt="2" width="80px" height="20px"></td>
+                            <td>1.98% <br> 10750 Votos</td>
+
+                        </tr>
+                    </table>
+                    <!-- Puedes agregar más datos de agrupaciones aquí -->
+                </div>
+                <img src="img/corrientes.png" class="corrientes-png" width="400px" height="500">
+            </div>
+            <div class="graficos">
+                <div class="bar" style="height: 80%;"></div>
+                <div class="bar" style="height: 20%;"></div>
+                <div class="bar" style="height: 5%;"></div>
+                <div class="bar" style="height: 45%;"></div>
+                <div class="bar" style="height: 40%;"></div>
+                <div class="bar" style="height: 35%;"></div>
+                <div class="bar" style="height: 4%;"></div>
+                <div class="bar" style="height: 15%;"></div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--Pie de página-->
+    <footer>
+        <div class="footer">
+            <img src="img/icons/Ministerio-del-Interior_pluma.1ab9a7a7.png" class="Ministerio" alt="Ministerio">
+            <img src="img/icons/Logo_DINE_negativo.a88f983e.png" class="logoFooter" alt="logoFooter"></a>
+            <img src="img/icons/logos_001-10.4430c8d5.png" class="logos" alt="logos"></a>
+            <h4>Resultados Provisorios en base a telegramas recibidos (Art. 43 Ley 26571 y Art. 105 Ley 19945).
+                Los porcentajes de las agrupaciones políticas son calculados spbre los votos válidos (PASO) conforme al
+                art.
+                45 Ley 26.571 y afirmativos (Generales).
+                No se incluyen los votos correspondientes a los electores residentes en el exterior ni privados de la
+                libertad. Al usar este sitio usted acepta los Términos y Condiciones</h4>
+        </div>
+    </footer>
+</body>

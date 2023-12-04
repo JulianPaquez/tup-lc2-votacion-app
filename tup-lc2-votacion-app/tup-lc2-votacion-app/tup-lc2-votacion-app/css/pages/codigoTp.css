@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+
+* {
+    font-family: 'Roboto';
+  
+}
+.header-page{
+    background-color: rgb(76, 141, 214);
+
+
+}
+.header-low{
+    background-color: #333;
+    display: flex;
+    
+}
+.consultar-header{
+    background-color: #333;
+    color: white;
+    font: #FFF;
+    flex-direction: row;
+    border-color: #333;
+
+}
+
+.linkpaso-header{
+    color: white;
+    background-color: magenta;
+    border-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    font: #333;
+    font-size: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
+    flex-direction: row;
+    
+}
+
+.linkgenerales-header{
+    color: white;
+    border-color: #333;
+    background-color: skyblue;
+    border-radius: 5px;
+    padding: 5px;
+    font: #FFF;
+    font-size: 12px;
+    margin-right: 10px;
+    flex-direction: row
+
+}
+
+.linkindex-header{
+    color: white;
+    background-color: #333;
+    border-color: #333;
+    border-radius: 15px;
+    border-color: white;
+    border-width: 1px;
+    padding: 5px;
+    font: #FFF;
+    font-size: 15px;
+    border-style: solid;
+    flex-direction: row-reverse;
+
+
+}
+
+.sec-titulo{
+    display: flex;
+    justify-content: center;
+}
+ h3:first-child {
+ color: white;
+ background-color: rgb(5, 184, 5);
+ border-width: 200px;
+ margin-right: 400px;
+ margin-left: 400px;
+ Padding: 15px;
+ Border-radius: 10px;
+ font-size:20px;
+ font-weight: 200;
+ text-align: center;
+ 
+}
+
+h3:nth-child(2) {
+    color: white;
+    background-color: rgb(211, 211, 3);
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+   
+}
+
+ h3:nth-child(3) {
+    color: white;
+    background-color: red;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+    
+}
+
+h3 i.fa{
+    font-size: 20px;
+    color: white;
+}
+
+thead{
+    color: black;
+    background-color: #FFF;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+    
+}
+
+th{
+    color: black;
+    background-color:rgb(216, 213, 213);
+    border-color: #333;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+     
+}
+
+tr:hover{
+
+    background-color: rgb(250, 250, 250)
+}
+
+td{
+    color: black;
+    background-color:rgb(216, 213, 213);
+    border-color: #333;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+}
+
+
+tr td:nth-child(3) p:nth-child(1){
+    Color:#FFF;
+    background-color: rgb(0, 183, 255);
+    border-radius: 10px;
+    Margin: 15px;
+    width: 184px;
+    height: 70px;
+    Padding: 0.5rem 1rem;
+    font-size: 12px;
+    
+}
+
+tr td:nth-child(3) p:nth-child(2){
+    Color: white;
+    background-color: rgb(251, 54, 163);
+    border-radius: 10px;
+    Margin: 15px;
+    width: 184px;
+    height: 70px;
+    Padding: 0.5rem 1rem;
+    font-size: 12px;
+    
+    
+    
+}
+
+tr td:nth-child(3) p:nth-child(3){
+    Color: white;
+    background-color: rgb(208, 151, 251);
+    border-radius: 10px;
+    Margin: 15px;
+    width: 184px;
+    height: 70px;
+    Padding: 0.5rem 1rem;
+    font-size: 12px;
+}
+
+footer{
+    background-color: rgb(59, 59, 59);
+    color: rgb(99, 96, 96);
+    display: flex;
+    padding: 40px;
+    
+}
+
+.Ministerio{
+    width: 150px;
+    height: 45px;
+}
+
+.logoFooter{
+    width: 150px;
+    height: 45px;
+}
+
+.logos{
+    width: 150px;
+    height: 45px;
+}
+
+h4{
+    flex-direction: row-reverse;
+    font-size: 15px;
+}
+
+
+
+/*@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+
+* {
+    font-family: 'Roboto';
+    
+  
+}
+.header-page{
+    background-color: rgb(76, 141, 214);
+
+
+}
+.header-low{
+    background-color: #333;
+    display: flex;
+    
+}
+.consultar-header{
+    background-color: #333;
+    color: white;
+    font: #FFF;
+    flex-direction: row;
+    border-color: #333;
+
+}
+
+.linkpaso-header{
+    color: white;
+    background-color: magenta;
+    border-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    font: #333;
+    font-size: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
+    flex-direction: row;
+    
+}
+
+.linkgenerales-header{
+    color: white;
+    border-color: #333;
+    background-color: skyblue;
+    border-radius: 5px;
+    padding: 5px;
+    font: #FFF;
+    font-size: 12px;
+    margin-right: 10px;
+    flex-direction: row
+
+}
+
+.linkindex-header{
+    color: white;
+    background-color: #333;
+    border-color: #333;
+    border-radius: 15px;
+    border-color: white;
+    border-width: 1px;
+    padding: 5px;
+    font: #FFF;
+    font-size: 15px;
+    border-style: solid;
+    flex-direction: row-reverse;
+
+
+}
+
+.sec-titulo{
+    display: flex;
+    justify-content: center;
+}
+ h3:first-child {
+ color: white;
+ background-color: rgb(5, 184, 5);
+ border-width: 200px;
+ margin-right: 400px;
+ margin-left: 400px;
+ Padding: 15px;
+ Border-radius: 10px;
+ font-size:20px;
+ font-weight: 200;
+ text-align: center;
+ 
+}
+
+h3:nth-child(2) {
+    color: white;
+    background-color: rgb(211, 211, 3);
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+   
+}
+
+ h3:nth-child(3) {
+    color: white;
+    background-color: red;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+    
+}
+
+#sec-contenido {
+    border: solid var(--border-Grilla) 1px;
+    width : 100%;
+    margin : 0px auto 50px auto;
+    border-radius: 15px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.reporte-elecciones{
+    width: 100%;
+    margin: 0 auto 50 auto;
+    Border-radius: 15px;
+    Border: 1px solido-borde-Grilla;
+    Border-collapse: collapse;
+    background-color: rgb(250, 250, 250)
+    
+
+}
+
+.reporte-elecciones thead {
+    text-align: center;
+    color: var(--titulo-Grilla);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--border-inferior-Grilla);
+    width: 100%;
+}
+
+
+.reporte-elecciones tbody tr:hover {
+    align-self: start;
+    background-color: white;
+    border-bottom: 1px solid var(--border-inferior-Grilla);
+    padding: 15px 0px;
+    width: 25%;
+}
+
+table {
+    grid: 100px 100px;
+    height: 25px;
+    padding: 5px;
+    font-size: 10px;
+    color: var(--textos);
+}
+
+.tabla-agrupacion{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.table-por{
+    color: var(--titulo-Grilla);
+    font-weight: normal;
+}
+h3 i.fa{
+    font-size: 20px;
+    color: white;
+}
+
+thead{
+    color: black;
+    background-color: #FFF;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200px;
+    text-align: center;
+    
+}
+
+td :first-child{
+    display: flex;
+}
+
+.leaflet-interactive{
+    justify-content: center;
+}
+
+td :nth-child(2){
+    display: flex;
+}
+.texto-elecciones-chico{
+    color: black;
+    text-align: center
+}
+
+.texto-path-chico{
+    color: rgb(59, 189, 240);
+}
+
+tr{
+    color: black;
+    border-color: #333;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+}
+
+
+.computos{
+    Color:#FFF;
+    background-color: rgb(0, 183, 255);
+    border-radius: 10px;
+    Margin: 15px;
+    width: 184px;
+    height: 70px;
+    Padding: 0.5rem 1rem;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start ;
+    justify-content: center;
+    
+}
+
+
+
+.electores{
+    Color: white;
+    background-color: rgb(251, 54, 163);
+    border-radius: 10px;
+    Margin: 15px;
+    width: 184px;
+    height: 70px;
+    Padding: 0.5rem 1rem;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start ;
+    justify-content: center;
+    
+    
+}
+
+
+.escrutado{
+    Color: white;
+    background-color: rgb(208, 151, 251);
+    border-radius: 10px;
+    Margin: 15px;
+    width: 184px;
+    height: 70px;
+    Padding: 0.5rem 1rem;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start ;
+    justify-content: center;
+}
+
+
+footer{
+    background-color: rgb(59, 59, 59);
+    color: rgb(99, 96, 96);
+   
+    display: flex;
+    padding: 40px;
+    
+    
+}
+
+.Ministerio{
+    width: 150px;
+    height: 45px;
+}
+
+.logoFooter{
+    width: 150px;
+    height: 45px;
+}
+
+.logos{
+    width: 150px;
+    height: 45px;
+}
+
+h4{
+    flex-direction: row-reverse;
+    font-size: 15px;
+}
+*/

@@ -1,0 +1,378 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+
+* {
+    font-family: 'Roboto';
+    
+  
+}
+
+*{
+    --magenta: #ee3d8f;
+--celeste: #37bbed;
+--morado: #9283be;
+--gris-claro: #9e9e9e;
+--titulos: #333;
+--textos: #333;
+--fondo-pantalla: rgb(235, 245, 251);
+--fondo-Cabecera: #18a0fb;
+--fondo-Footer: #333;
+--fondo-Menu: #333;
+--texto-footer: #9e9e9e;
+--titulo-Grilla: #727272;
+--borde-inferior-Grilla: #727272;
+--borde-Grilla: #c5c5c5;
+--grafica-amarillo: rgb(252, 210, 0);
+--grafica-amarillo-claro: rgba(252, 210, 0, 0.3);
+--grafica-celeste: rgb(0, 169, 232);
+--grafica-celeste-claro: rgba(0, 169, 232, 0.3);
+--grafica-bordo: rgb(171, 40, 40);
+--grafica-bordo-claro: rgba(171, 40, 40, 0.3);
+--grafica-lila: rgb(112, 76, 159);
+--grafica-lila-claro: rgba(112, 76, 159, 0.5);
+--grafica-lila2: rgb(77, 46, 110);
+--grafica-lila2-claro: rgba(77, 46, 110, 0.5);
+--grafica-gris: rgb(128, 128, 128);
+--grafica-gris-claro: rgb(128, 128, 128, 0.5);
+--grafica-verde: rgb(102, 171, 60);
+--grafica-verde-claro: rgba(102, 171, 60, 0.5);
+--mensaje-usuario-amarillo: #ffc107;
+--mensaje-usuario-verde: #28a745;
+--mensaje-usuario-rojo: #dc3545;
+}
+.header-page{
+    background-color: var(--fondo-Cabecera);
+
+
+}
+
+.logo{
+    background-color: #18a0fb;
+}
+.header-low{
+    background-color: #333;
+    display: flex;
+    
+}
+.consultar-header{
+    background-color: #333;
+    color: white;
+    font: #FFF;
+    flex-direction: row;
+    border-color: #333;
+
+}
+
+
+.linkpaso-header {
+    color: white;
+    background-color: magenta;
+    border-color: #333;
+    border-radius: 5px;
+    padding: 5px;
+    font: #FFF;
+    font-size: 12px;
+    margin-right: 10px;
+    flex-direction: row;
+    text-decoration: none;
+    width: 35px;
+    
+}
+
+.linkgenerales-header{
+    color: white;
+    border-color: #333;
+    background-color: skyblue;
+    border-radius: 5px;
+    padding: 5px;
+    font: #FFF;
+    font-size: 12px;
+    margin-right: 10px;
+    flex-direction: row;
+    text-decoration: none;
+
+}
+
+.linkindex-header{
+    color: white;
+    background-color: #9e9e9e;
+    border-color: #333;
+    border-radius: 15px;
+    border-color: white;
+    border-width: 1px;
+    font: #FFF;
+    border-style: solid;
+    flex-direction: row-reverse;
+    text-decoration: none;
+
+
+}
+
+.sec-titulo{
+    display: flex;
+    justify-content: center;
+}
+ h3:first-child {
+ color: white;
+ background-color: #28a745; 
+ border-width: 200px;
+ margin-right: 400px;
+ margin-left: 400px;
+ Padding: 15px;
+ Border-radius: 10px;
+ font-size:20px;
+ font-weight: 200;
+ text-align: center;
+ 
+}
+
+h3:nth-child(2) {
+    color: white;
+    background-color: #ffc107;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+   
+}
+
+ h3:nth-child(3) {
+    color: white;
+    background-color: #dc3545;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+    
+}
+
+#sec-contenido {
+    border: solid var(--border-Grilla) 1px;
+    width : 100%;
+    margin : 0px auto 50px auto;
+    border-radius: 15px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+
+.reporte-elecciones{
+    display: block;
+    justify-content: space-between;
+    /*width: 100%;*/
+    margin-left: 50px;
+    margin-right: 50px;
+    Border-radius: 15px;
+    border-style:solid ;
+    border-collapse: collapse;
+    border-color: #bdb3b3;
+    border-width: 1px;
+    background-color: rgb(250, 250, 250);
+
+    
+
+}
+
+.reporte-elecciones thead {
+    text-align: center;
+    color: var(--titulo-Grilla);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--border-inferior-Grilla);
+    
+    
+}
+
+
+.reporte-elecciones tbody tr:hover {
+    background-color: rgb(250, 250, 250);
+
+}
+
+.reporte-elecciones tbody td{
+   background-color: rgb(255, 255, 255);
+    border-bottom:1px solido –borde-inferior-Grilla;
+    Padding: 15px 0px;
+    font-size: 12px;
+    
+    
+}
+
+/*table {
+    grid: 100px 100px;
+    height: 25px;
+    padding: 5px;
+    font-size: 10px;
+    color: var(--textos);
+}
+
+.tabla-agrupacion{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.table-por{
+    color: var(--titulo-Grilla);
+    font-weight: normal;
+}*/
+h3 i.fa{
+    font-size: 20px;
+    color: white;
+}
+
+thead{
+    color: black;
+    background-color: #FFF;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200px;
+    text-align: center;
+    
+}
+
+td :first-child{
+    display: flex;
+}
+
+.leaflet-interactive{
+    justify-content: center;
+}
+
+td :nth-child(2){
+    display: flex;
+}
+.texto-elecciones-chico{
+    color: black;
+    text-align: center
+}
+
+.texto-path-chico{
+    color: rgb(59, 189, 240);
+}
+
+tr{
+    color: black;
+    border-color: #333;
+    border-width: 200px;
+    margin-right: 400px;
+    margin-left: 400px;
+    Padding: 15px;
+    Border-radius: 10px;
+    font-size:20px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.GENERALES{
+    display: flex;
+    flex-direction: row;
+}
+
+.computos{
+    Color:#FFF;
+    background-color: #37bbed;;
+    border-radius: 10px;
+    Margin: 15px;
+    width: 184px;
+    height: 70px;
+    Padding: 0.5rem 1rem;
+    font-size: 12px;
+    display: flex;
+    text-align: center ;
+    justify-content: center;
+    
+}
+
+
+
+.electores{
+    Color: white;
+    background-color: #ee3d8f;
+    border-radius: 10px;
+    Margin: 15px;
+    width: 184px;
+    height: 70px;
+    Padding: 0.5rem 1rem;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start ;
+    justify-content: center;
+    
+    
+}
+
+
+.escrutado{
+    Color: white;
+    background-color:  #9283be;
+    border-radius: 10px;
+    Margin: 15px;
+    width: 184px;
+    height: 70px;
+    Padding: 0.5rem 1rem;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start ;
+    justify-content: center;
+}
+
+
+
+footer{
+    background-color: rgb(59, 59, 59);
+    color: rgb(99, 96, 96);
+   
+    display: flex;
+    padding: 40px;
+    
+    
+}
+
+.Ministerio{
+    width: 150px;
+    height: 45px;
+}
+
+.logoFooter{
+    width: 150px;
+    height: 45px;
+}
+
+.logos{
+    width: 150px;
+    height: 45px;
+}
+
+h4{
+    flex-direction: row-reverse;
+    font-size: 15px;
+    color: var(--texto-footer);
+}
+
+.table-header a{
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin-right: 10px;
+    width: 20px;
+    font-size: 13px;
+}
+
+.VACIO{
+    width: 2000px;
+}
