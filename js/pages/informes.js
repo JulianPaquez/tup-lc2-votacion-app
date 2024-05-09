@@ -70,13 +70,13 @@ async function consultarResultados(url, informe) {
     } else {
       mostrarMensaje(
         mensajeRojo,
-        "Error. El servicio esta caido por el momento. Intente mas tarde."
+        "Error: Se produjo un error al intentar agregar resultados al informe"
       );
     }
   } catch (err) {
     mostrarMensaje(
       mensajeRojo,
-      "Error. El servicio esta caido por el momento. Intente mas tarde."
+      "Error: Se produjo un error al intentar agregar resultados al informe"
     );
   }
 }

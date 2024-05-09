@@ -241,22 +241,22 @@ function mostrarCampoFaltante() {
   if (periodosSelect.value == "none") {
     mostrarMensaje(
       mensajeAmarillo,
-      "Por favor complete los campos de año, cargo, distrito y seccion antes de filtrar"
+      "La operación no se pudo completar.Por favor complete todos los campos!"
     );
   } else if (cargosSelect.value == "none") {
     mostrarMensaje(
       mensajeAmarillo,
-      "Por favor complete los campos de cargo, distrito y seccion antes de filtrar"
+      "La operación no se pudo completar.Por favor complete todos los campos!"
     );
   } else if (distritosSelect.value == "none") {
     mostrarMensaje(
       mensajeAmarillo,
-      "Por favor complete los campos de distrito y seccion antes de filtrar"
+      "La operación no se pudo completar.Por favor complete todos los campos!"
     );
   } else {
     mostrarMensaje(
       mensajeAmarillo,
-      "Por favor complete el campos de seccion antes de filtrar"
+      "La operación no se pudo completar.Por favor complete todos los campos!"
     );
   }
 }
@@ -327,13 +327,13 @@ async function consultarResultados() {
       } else {
         mostrarMensaje(
           mensajeRojo,
-          "Error. El servicio esta caido por el momento. Intente mas tarde."
+          "Error: Se produjo un error al intentar agregar resultados al informe"
         );
       }
     } catch (err) {
       mostrarMensaje(
         mensajeRojo,
-        "Error. El servicio esta caido por el momento. Intente mas tarde."
+        "Error: Se produjo un error al intentar agregar resultados al informe"
       );
     }
   } else {
@@ -414,14 +414,14 @@ async function consultarAños() {
     } else {
       mostrarMensaje(
         mensajeRojo,
-        "Error. El servicio esta caido por el momento. Intente mas tarde."
+        "Error: Se produjo un error al intentar agregar resultados al informe"
       );
     }
   } catch (err) {
     ocultarMensajes();
     mostrarMensaje(
       mensajeRojo,
-      "Error. El servicio esta caido por el momento. Intente mas tarde."
+      "Error: Se produjo un error al intentar agregar resultados al informe"
     );
     setInterval(function () {
       mensajeRojo.style.visibility = "visible";
@@ -455,13 +455,13 @@ async function consultarDatos() {
     } else {
       mostrarMensaje(
         mensajeRojo,
-        "Error. El servicio esta caido por el momento. Intente mas tarde."
+        "Error: Se produjo un error al intentar agregar resultados al informe"
       );
     }
   } catch (err) {
     mostrarMensaje(
       mensajeRojo,
-      "Error. El servicio esta caido por el momento. Intente mas tarde."
+      "Error: Se produjo un error al intentar agregar resultados al informe"
     );
   }
 }
