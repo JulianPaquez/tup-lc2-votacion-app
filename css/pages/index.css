@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+.sec.titulo {
+  display: flex;
+  align-items: center;
+}
+
+.imagen-electoral {
+  margin: 15px;
+  width: 350px;
+}
+
+.linkpaso-header {
+  text-decoration: none;
+}
+
+.linkinformes-header {
+  text-decoration: none;
+}
+
+.linkgenerales-header {
+  text-decoration: none;
+}
+
+.sec-titulo {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.imagen-electoral img {
+  margin: 15px;
+  max-width: 350px;
+  width: 350px;
+  height: auto;
+}
+
+.sec-contenido {
+  margin-left: 100px;
+}
+
+.paso-generales {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 90px;
+}
+
+.paso {
+  border-radius: 10px;
+  margin: 5%;
+  height: 100px;
+  width: 400px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+  background-color: var(--magenta);
+}
+
+.generales {
+  background-color: var(--celeste);
+  border-radius: 10px;
+  margin: 5%;
+  height: 100px;
+  width: 400px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.section-linkpaso {
+  text-decoration: none;
+  color: white;
+}
+
+.section-linkgenerales {
+  text-decoration: none;
+  color: white;
+}

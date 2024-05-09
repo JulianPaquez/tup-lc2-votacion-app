@@ -1,0 +1,1007 @@
+.menu-principal {
+  margin-left: 0px;
+  margin-right: 13px;
+  background-color: var(--fondo-Menu);
+  width: 100%;
+  list-style: none;
+  color: #ffffff;
+}
+
+.menu-principal li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.menu-principal li a {
+  text-decoration: none;
+}
+
+.menu-boton {
+  display: inline-block;
+  text-decoration: none;
+  width: 100px;
+  padding: 5px 25px;
+  border-radius: 20px;
+  border: 2px solid #c9c9c9;
+  color: #c9c9c9;
+  font-size: 10px;
+  margin: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menu-boton:hover {
+  color: var(--gris-claro);
+  cursor: pointer;
+}
+
+.menu-boton-paso-gral {
+  border-radius: 5px;
+  color: #ffffff;
+  border: none;
+}
+
+.boton-paso {
+  background-color: var(--magenta);
+}
+
+.boton-gral {
+  background-color: var(--celeste);
+}
+*/ .texto-path {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: var(--celeste);
+}
+
+/* --------------------------- */
+/* Estilos para los recuadros de agregar informe, mesas escrutadas, etc */
+/* --------------------------- */
+
+/* Estilos para agregar informe */
+.agregar-informe {
+  background-color: var(--gris-claro);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin: 15px;
+  border-radius: 5px;
+  height: 40px;
+  width: 224px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: var(--textos);
+}
+
+/* --------------------------- */
+/* Estilos para los cuadros de agrupaciones, provincias, resumen */
+/* --------------------------- */
+
+/* Estilos para los cuadros en general */
+.cuadros {
+  border-radius: 25px;
+  border: 1px var(--borde-Grilla) solid;
+  margin: 10px;
+  margin-bottom: 50px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  height: 600px;
+  width: 550px;
+}
+
+/* Estilos para los títulos de los cuadros */
+.titulo-cuadros {
+  font-weight: bold;
+  padding: 1.8em 0 0 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* --------------------------- */
+/* Estilos para el cuadro de Agrupaciones políticas */
+/* --------------------------- */
+
+/* Se agrega barra de desplazamiento vertical */
+.cuadro-agrupaciones {
+  overflow-y: auto;
+  height: 325px;
+}
+
+/* Estilos para el cuadro de cada Agrupacion política */
+.agrupacion {
+  height: 325px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los textos dentro de Agrupaciones políticas */
+.cuadro-agrupaciones p {
+  font-size: 11px;
+  color: var(--textos);
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  margin: 10px 15px 0px 0px;
+}
+
+/* Estilos para los títulos de cada Agrupación */
+.titulo-agrupaciones {
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--borde-Grilla);
+  margin: 0;
+  padding: 5px;
+}
+
+.partido {
+  height: 150px;
+}
+
+.porcentajes {
+  float: right;
+  color: var(--texto-footer);
+}
+
+/* --------------------------- */
+/* Estilos para el cuadro de Provincias */
+/* --------------------------- */
+
+.cuadro-provincias {
+  text-align: center;
+}
+
+.contenedor-provincia {
+  padding-top: 20px;
+  width: 480px;
+  height: 480px;
+}
+
+.cuadro-provincias svg {
+  padding-top: 50px;
+  transform: scale(2);
+}
+
+/* --------------------------- */
+/* Estilos para el cuadro de Resumen */
+/* --------------------------- */
+
+/*barra de progreso*/
+.progress {
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.progress-bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: width 0.25s;
+  border-radius: 5px;
+}
+
+.progress-bar-text {
+  margin-left: 10px;
+  font-weight: bold;
+  color: var(--textos);
+  font-size: 9px;
+}
+
+/* --------------------------- */
+/* Grafico de resumen de votos */
+/* --------------------------- */
+
+.chart-wrap {
+  --chart-width: 260px;
+  --grid-color: #aaa;
+  --bar-thickness: 25px;
+  --bar-rounded: 3px;
+  --bar-spacing: 10px;
+  font-family: sans-serif;
+  width: var(--chart-width);
+  transform: scale(1.4);
+  margin-left: 75px;
+}
+
+.chart-wrap .title {
+  font-weight: bold;
+  padding: 1.8em 0 2.8em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* cuando definimos el gráfico en horizontal, lo giramos 90 grados */
+.chart-wrap.horizontal .grid {
+  transform: rotate(-90deg);
+}
+
+.chart-wrap.horizontal .bar::after {
+  /* giramos las letras para horizontal*/
+  transform: rotate(45deg);
+  padding-top: 0px;
+  display: block;
+  font-size: 8px;
+}
+
+.chart-wrap .grid {
+  margin-left: 50px;
+  position: relative;
+  padding: 5px 0 5px 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid var(--grid-color);
+  font-size: 10px;
+}
+
+/* posicionamos el % del gráfico*/
+.chart-wrap .grid::before {
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "0%";
+  position: absolute;
+  left: -0.5em;
+  top: -1.5em;
+}
+
+.chart-wrap .grid::after {
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "100%";
+  position: absolute;
+  right: -1.5em;
+  top: -1.5em;
+}
+
+/* giramos las valores de 0% y 100% para horizontal */
+.chart-wrap.horizontal .grid::before,
+.chart-wrap.horizontal .grid::after {
+  transform: rotate(90deg);
+}
+
+.chart-wrap .bar {
+  width: var(--bar-value);
+  height: var(--bar-thickness);
+  margin: var(--bar-spacing) 0;
+  background-color: var(--bar-color);
+  border-radius: 0 var(--bar-rounded) var(--bar-rounded) 0;
+}
+
+.chart-wrap .bar:hover {
+  opacity: 0.7;
+}
+
+.chart-wrap .bar::after {
+  content: attr(data-name);
+  margin-left: 100%;
+  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* --------------------------- */
+/* --------------------------- */
+
+/* @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+  --magenta: #ee3d8f;
+  --celeste: #37bbed;
+  --morado: #9283be;
+  --gris-claro: #9e9e9e;
+  --titulos: #333;
+  --textos: #333;
+  --fondo-pantalla: rgb(235, 245, 251);
+  --fondo-Cabecera: #18a0fb;
+  --fondo-Footer: #333;
+  --fondo-Menu: #333;
+  --texto-footer: #9e9e9e;
+  --titulo-Grilla: #727272;
+  --borde-inferior-Grilla: #727272;
+  --borde-Grilla: #c5c5c5;
+  --grafica-amarillo: rgb(252, 210, 0);
+  --grafica-amarillo-claro: rgba(252, 210, 0, 0.3);
+  --grafica-celeste: rgb(0, 169, 232);
+  --grafica-celeste-claro: rgba(0, 169, 232, 0.3);
+  --grafica-bordo: rgb(171, 40, 40);
+  --grafica-bordo-claro: rgba(171, 40, 40, 0.3);
+  --grafica-lila: rgb(112, 76, 159);
+  --grafica-lila-claro: rgba(112, 76, 159, 0.5);
+  --grafica-lila2: rgb(77, 46, 110);
+  --grafica-lila2-claro: rgba(77, 46, 110, 0.5);
+  --grafica-gris: rgb(128, 128, 128);
+  --grafica-gris-claro: rgb(128, 128, 128, 0.5);
+  --grafica-verde: rgb(102, 171, 60);
+  --grafica-verde-claro: rgba(102, 171, 60, 0.5);
+  --mensaje-usuario-amarillo: #ffc107;
+  --mensaje-usuario-verde: #28a745;
+  --mensaje-usuario-rojo: #dc3545;
+}
+
+* {
+  font-family: "Roboto";
+}
+
+body {
+  background-color: var(--fondo-pantalla);
+}
+
+p {
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 26px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h6 {
+  color: var(--textos);
+}
+
+.logo {
+  background-color: var(--fondo-Cabecera);
+  width: 150px;
+  height: auto;
+}
+
+.container-logo {
+  width: 100%;
+  background-color: var(--fondo-Cabecera);
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--fondo-Menu);
+  margin-top: 0;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+
+.contenido-menu {
+  margin-top: 10px;
+  padding: 5px;
+  padding-bottom: 10px;
+  margin-left: 13px;
+  margin-right: 13px;
+  float: left;
+  width: max-content;
+}
+
+select {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  color: var(--celeste);
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+select:hover {
+  color: white;
+}
+
+.filtrar {
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 5px;
+  margin-top: -5px;
+}
+
+.input-filtrar {
+  border: none;
+  text-align: center;
+  width: 70px;
+  outline: none;
+  font-size: 15px;
+  padding-right: 10px;
+  border-radius: 15px;
+}
+
+.filtrar button {
+  border: none;
+  background-color: transparent;
+  transition: color 0.3s ease;
+}
+
+.filtrar button:hover {
+  color: var(--celeste);
+}
+
+.boton-informes {
+  border-radius: 30px;
+  border: 1px solid white;
+  padding: 7px 30px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.boton-informes:hover {
+  background-color: var(--gris-claro);
+}
+
+.boton-inicio {
+  background-color: var(--gris-claro);
+  border-radius: 5px;
+  padding: 7px 40px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.boton-inicio:hover {
+  color: var(--textos);
+}
+
+MAIN-------------------------------------------------
+main {
+  margin: 20px;
+}
+
+.texto-path {
+  font-size: 14px;
+  font-family: "Roboto";
+  color: var(--celeste);
+}
+
+.sec-contenido {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.add-informe {
+  align-self: center;
+  background-color: var(--gris-claro);
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.add-informe input {
+  background-color: transparent;
+  outline: none;
+  color: white;
+  padding: 5px 30px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.add-informe input:hover {
+  color: var(--textos);
+}
+
+.vacio {
+  display: flex;
+  width: 300px;
+}
+
+.carteles {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.mesas-escrutadas {
+  display: flex;
+  background-color: var(--celeste);
+  margin: 15px;
+  width: 184px;
+  height: 70px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+}
+
+.electores {
+  display: flex;
+  background-color: var(--magenta);
+  margin: 15px;
+  width: 184px;
+  height: 70px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+}
+
+.participacion {
+  display: flex;
+  background-color: var(--morado);
+  margin: 15px;
+  width: 184px;
+  height: 70px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+}
+
+AVANCE 1-12 CABECERA Y PRIMER PARTE DEL MAIN HECHAS
+
+.cuadros {
+  border-radius: 25px;
+  border: 1px var(--borde-Grilla) solid;
+  margin: 10px;
+  margin-bottom: 50px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  height: 600px;
+  width: 550px;
+}
+
+ Estilos para los títulos de los cuadros 
+.titulo-cuadros {
+  font-weight: bold;
+  padding: 1.8em 0 0 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+ --------------------------- 
+ Estilos para el cuadro de Agrupaciones políticas 
+ --------------------------- 
+
+ Se agrega barra de desplazamiento vertical 
+.cuadro-agrupaciones {
+  overflow-y: auto;
+  height: 325px;
+}
+
+ Estilos para el cuadro de cada Agrupacion política 
+.agrupacion {
+  height: 325px;
+  margin-bottom: 20px;
+}
+
+ Estilos para los textos dentro de Agrupaciones políticas 
+.cuadro-agrupaciones p {
+  font-size: 11px;
+  color: var(--textos);
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  margin: 10px 15px 0px 0px;
+}
+
+Estilos para los títulos de cada Agrupación 
+.titulo-agrupaciones {
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--borde-Grilla);
+  margin: 0;
+  padding: 5px;
+}
+
+.partido {
+  height: 150px;
+}
+
+.porcentajes {
+  float: right;
+  color: var(--texto-footer);
+}
+ --------------------------- 
+Estilos para el cuadro de Provincias 
+--------------------------- 
+
+.cuadro-provincias {
+  text-align: center;
+}
+
+.contenedor-provincia {
+  padding-top: 20px;
+  width: 480px;
+  height: 480px;
+}
+
+.cuadro-provincias svg {
+  padding-top: 50px;
+  transform: scale(2);
+}
+
+ --------------------------- 
+ Estilos para el cuadro de Resumen 
+ --------------------------- 
+
+barra de progreso
+.progress {
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.progress-bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: width 0.25s;
+  border-radius: 5px;
+}
+
+.progress-bar-text {
+  margin-left: 10px;
+  font-weight: bold;
+  color: var(--textos);
+  font-size: 9px;
+}
+
+ --------------------------- 
+ Grafico de resumen de votos 
+---------------------------
+
+.chart-wrap {
+  --chart-width: 260px;
+  --grid-color: #aaa;
+  --bar-thickness: 25px;
+  --bar-rounded: 3px;
+  --bar-spacing: 10px;
+  font-family: sans-serif;
+  width: var(--chart-width);
+  transform: scale(1.4);
+  margin-left: 75px;
+}
+
+.chart-wrap .title {
+  font-weight: bold;
+  padding: 1.8em 0 2.8em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+cuando definimos el gráfico en horizontal, lo giramos 90 grados 
+.chart-wrap.horizontal .grid {
+  transform: rotate(-90deg);
+}
+
+.chart-wrap.horizontal .bar::after {
+  giramos las letras para horizontal
+  transform: rotate(45deg);
+  padding-top: 0px;
+  display: block;
+  font-size: 8px;
+}
+
+.chart-wrap .grid {
+  margin-left: 50px;
+  position: relative;
+  padding: 5px 0 5px 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid var(--grid-color);
+  font-size: 10px;
+}
+
+ posicionamos el % del gráfico
+.chart-wrap .grid::before {
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "0%";
+  position: absolute;
+  left: -0.5em;
+  top: -1.5em;
+}
+
+.chart-wrap .grid::after {
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "100%";
+  position: absolute;
+  right: -1.5em;
+  top: -1.5em;
+}
+
+ giramos las valores de 0% y 100% para horizontal 
+.chart-wrap.horizontal .grid::before,
+.chart-wrap.horizontal .grid::after {
+  transform: rotate(90deg);
+}
+
+.chart-wrap .bar {
+  width: var(--bar-value);
+  height: var(--bar-thickness);
+  margin: var(--bar-spacing) 0;
+  background-color: var(--bar-color);
+  border-radius: 0 var(--bar-rounded) var(--bar-rounded) 0;
+}
+
+.chart-wrap .bar:hover {
+  opacity: 0.7;
+}
+
+.chart-wrap .bar::after {
+  content: attr(data-name);
+  margin-left: 100%;
+  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
+} */
+
+/* .sector-main {
+  width: 100%;
+  margin: 0px;
+  padding: 0%;
+}
+
+.cuadro-agrupacion {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.recuadro {
+  border-radius: 5px;
+  border: 1px var(--borde-Grilla) solid;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 5px 5px;
+  padding: 5px 15px;
+  text-align: start;
+  white-space: nowrap;
+  width: 25%;
+  background-color: white;
+}
+
+.titulo-recuadro {
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.scroll-vertical {
+  overflow-y: scroll;
+  height: 325px;
+}
+
+.titulo-agrupacion {
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--borde-Grilla);
+  margin-bottom: 10px;
+}
+
+#bar-juntos-por-el-cambio {
+  height: 15px;
+  background-color: var(--grafica-amarillo-claro);
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-juntos-por-el-cambio::before {
+  content: "";
+  position: absolute;
+  width: 38%;
+  height: 100%;
+  background-color: var(--grafica-amarillo);
+}
+
+#bar-vamos-corrientes {
+  height: 15px;
+  background-color: var(--grafica-verde-claro);
+  width: 100%;
+  /* Establece el ancho de la barra al 100% */
+/* Establece el color de fondo de la barra como transparente */
+/*border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-vamos-corrientes::before {
+  content: "";
+  position: absolute;
+  width: 58.95%;
+  height: 100%;
+  background-color: var(--grafica-verde);
+}
+
+#bar-frente-de-todos {
+  height: 15px;
+  background-color: var(--grafica-celeste-claro);
+  width: 100%;*/
+/* Establece el ancho de la barra al 100% */
+/* Establece el color de fondo de la barra como transparente */
+/*border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-frente-de-todos::before {
+  content: "";
+  position: absolute;
+  width: 26.64%;
+  height: 100%;
+  background-color: var(--grafica-celeste);
+}
+
+#bar-vamos-con-vos {
+  height: 15px;
+  background-color: rgba(127, 255, 212, 0.3);
+  width: 100%;*/
+/* Establece el ancho de la barra al 100% */
+/* Establece el color de fondo de la barra como transparente */
+/*border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-vamos-con-vos::before {
+  content: "";
+  position: absolute;
+  width: 2.51%;
+  height: 100%;
+  background-color: rgb(35, 185, 123);
+}
+
+#bar-compromiso-federal {
+  height: 15px;
+  background-color: rgba(0, 0, 255, 0.3);
+  width: 100%;*/
+/* Establece el ancho de la barra al 100% */
+/* Establece el color de fondo de la barra como transparente */
+/*border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#bar-compromiso-federal::before {
+  content: "";
+  position: absolute;
+  width: 1.95%;
+  height: 100%;
+  background-color: blue;
+}
+
+.partido {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 0px;
+  margin: 0px 0px;
+}
+
+.recuadro:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+.recuadro svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}*/
+
+/* ULTIMO CUADRO--------------------------------------------------------------------------*/
+/*barra de progreso*/
+
+/*.chart-wrap {
+  --chart-width: 260px;
+  --grid-color: #aaa;
+  --columna-thickness: 25px;
+  --columna-rounded: 3px;
+  --columna-spacing: 10px;
+  font-family: sans-serif;
+  width: var(--chart-width);
+}
+
+.chart-wrap .title {
+  font-weight: bold;
+  padding: 25px 10px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  font-size: 20px;
+}*/
+
+/* cuando definimos el gráfico en horizontal, lo giramos 90 grados */
+/*.chart-wrap.horizontal .grid {
+  transform: rotate(-90deg);
+}*/
+
+/*.chart-wrap.horizontal .columna::after {
+  /* giramos las letras para horizontal*/
+/*  transform: rotate(45deg);
+  padding-top: 0px;
+  display: block;
+}
+
+.chart-wrap .grid {
+  margin-left: 50px;
+  position: relative;
+  padding: 5px 0 5px 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid var(--grid-color);
+  font-size: 10px;
+}
+*/
+/* posicionamos el % del gráfico*/
+/*.chart-wrap .grid::before {
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "0%";
+  position: absolute;
+  left: -0.5em;
+  top: -1.5em;
+}
+
+.chart-wrap .grid::after {
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "100%";
+  position: absolute;
+  right: -1.5em;
+  top: -1.5em;
+}*/
+
+/* giramos las valores de 0% y 100% para horizontal */
+/*.chart-wrap.horizontal .grid::before,
+.chart-wrap.horizontal .grid::after {
+  transform: rotate(90deg);
+}
+
+.chart-wrap .columna {
+  width: var(--columna-value);
+  height: var(--columna-thickness);
+  margin: var(--columna-spacing) 0;
+  background-color: var(--columna-color);
+  border-radius: 0 var(--columna-rounded) var(--columna-rounded) 0;
+}
+
+.chart-wrap .columna:hover {
+  opacity: 0.7;
+}
+
+.chart-wrap .columna::after {
+  content: attr(data-name);
+  margin-left: 100%;
+  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.recuadro:nth-child(3) {
+  display: flex;
+  justify-content: start;
+  align-items: self-start;
+}
+ */

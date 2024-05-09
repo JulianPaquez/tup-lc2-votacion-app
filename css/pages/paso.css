@@ -1,0 +1,279 @@
+.menu-principal {
+  margin-left: 0px;
+  margin-right: 13px;
+  background-color: var(--fondo-Menu);
+  width: 100%;
+  list-style: none;
+  color: #ffffff;
+}
+
+.menu-principal li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.menu-principal li a {
+  text-decoration: none;
+}
+
+.menu-boton {
+  display: inline-block;
+  text-decoration: none;
+  width: 100px;
+  padding: 5px 25px;
+  border-radius: 20px;
+  border: 2px solid #c9c9c9;
+  color: #c9c9c9;
+  font-size: 10px;
+  margin: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menu-boton:hover {
+  color: var(--gris-claro);
+  cursor: pointer;
+}
+
+.menu-boton-paso-gral {
+  border-radius: 5px;
+  color: #ffffff;
+  border: none;
+}
+
+.boton-paso {
+  background-color: var(--celeste);
+}
+*/ .texto-path {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: var(--celeste);
+}
+
+/* --------------------------- */
+/* Estilos para los recuadros de agregar informe, mesas escrutadas, etc */
+/* --------------------------- */
+
+/* Estilos para agregar informe */
+.agregar-informe {
+  background-color: var(--gris-claro);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin: 15px;
+  border-radius: 5px;
+  height: 40px;
+  width: 224px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: var(--textos);
+}
+
+/* --------------------------- */
+/* Estilos para los cuadros de agrupaciones, provincias, resumen */
+/* --------------------------- */
+
+/* Estilos para los cuadros en general */
+.cuadros {
+  border-radius: 25px;
+  border: 1px var(--borde-Grilla) solid;
+  margin: 10px;
+  margin-bottom: 50px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  height: 600px;
+  width: 550px;
+}
+
+/* Estilos para los títulos de los cuadros */
+.titulo-cuadros {
+  font-weight: bold;
+  padding: 1.8em 0 0 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* --------------------------- */
+/* Estilos para el cuadro de Agrupaciones políticas */
+/* --------------------------- */
+
+/* Se agrega barra de desplazamiento vertical */
+.cuadro-agrupaciones {
+  overflow-y: auto;
+  height: 325px;
+}
+
+/* Estilos para el cuadro de cada Agrupacion política */
+.agrupacion {
+  height: 325px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los textos dentro de Agrupaciones políticas */
+.cuadro-agrupaciones p {
+  font-size: 11px;
+  color: var(--textos);
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  margin: 10px 15px 0px 0px;
+}
+
+/* Estilos para los títulos de cada Agrupación */
+.titulo-agrupaciones {
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--borde-Grilla);
+  margin: 0;
+  padding: 5px;
+}
+
+.partido {
+  height: 150px;
+}
+
+.porcentajes {
+  float: right;
+  color: var(--texto-footer);
+}
+
+/* --------------------------- */
+/* Estilos para el cuadro de Provincias */
+/* --------------------------- */
+
+.cuadro-provincias {
+  text-align: center;
+}
+
+.contenedor-provincia {
+  padding-top: 20px;
+  width: 480px;
+  height: 480px;
+}
+
+.cuadro-provincias svg {
+  padding-top: 50px;
+  transform: scale(2);
+}
+
+/* --------------------------- */
+/* Estilos para el cuadro de Resumen */
+/* --------------------------- */
+
+/*barra de progreso*/
+.progress {
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.progress-bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: width 0.25s;
+  border-radius: 5px;
+}
+
+.progress-bar-text {
+  margin-left: 10px;
+  font-weight: bold;
+  color: var(--textos);
+  font-size: 9px;
+}
+
+/* --------------------------- */
+/* Grafico de resumen de votos */
+/* --------------------------- */
+
+.chart-wrap {
+  --chart-width: 260px;
+  --grid-color: #aaa;
+  --bar-thickness: 25px;
+  --bar-rounded: 3px;
+  --bar-spacing: 10px;
+  font-family: sans-serif;
+  width: var(--chart-width);
+  transform: scale(1.4);
+  margin-left: 75px;
+}
+
+.chart-wrap .title {
+  font-weight: bold;
+  padding: 1.8em 0 2.8em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* cuando definimos el gráfico en horizontal, lo giramos 90 grados */
+.chart-wrap.horizontal .grid {
+  transform: rotate(-90deg);
+}
+
+.chart-wrap.horizontal .bar::after {
+  /* giramos las letras para horizontal*/
+  transform: rotate(45deg);
+  padding-top: 0px;
+  display: block;
+  font-size: 8px;
+}
+
+.chart-wrap .grid {
+  margin-left: 50px;
+  position: relative;
+  padding: 5px 0 5px 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid var(--grid-color);
+  font-size: 10px;
+}
+
+/* posicionamos el % del gráfico*/
+.chart-wrap .grid::before {
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "0%";
+  position: absolute;
+  left: -0.5em;
+  top: -1.5em;
+}
+
+.chart-wrap .grid::after {
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "100%";
+  position: absolute;
+  right: -1.5em;
+  top: -1.5em;
+}
+
+/* giramos las valores de 0% y 100% para horizontal */
+.chart-wrap.horizontal .grid::before,
+.chart-wrap.horizontal .grid::after {
+  transform: rotate(90deg);
+}
+
+.chart-wrap .bar {
+  width: var(--bar-value);
+  height: var(--bar-thickness);
+  margin: var(--bar-spacing) 0;
+  background-color: var(--bar-color);
+  border-radius: 0 var(--bar-rounded) var(--bar-rounded) 0;
+}
+
+.chart-wrap .bar:hover {
+  opacity: 0.7;
+}
+
+.chart-wrap .bar::after {
+  content: attr(data-name);
+  margin-left: 100%;
+  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
+}
