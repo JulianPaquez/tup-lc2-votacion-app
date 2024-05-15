@@ -481,6 +481,19 @@ function agregarInforme() {
 
   let informes = [];
 
+  if (
+    periodosSelect.value === "none" ||
+    cargosSelect.value === "none" ||
+    distritosSelect.value === "none" ||
+    seccionSelect.value === "none"
+  ) {
+    mostrarMensaje(
+      mensajeRojo,
+      "Error: Se produjo un error al intentar agregar resultados al informe.Por favor complete todos los campos antes de agregar el informe."
+    );
+    return; // Sale de la función si no se completan todos los campos
+  }
+
   if (localStorage.getItem("INFORMES")) {
     informes = JSON.parse(localStorage.getItem("INFORMES"));
   }
