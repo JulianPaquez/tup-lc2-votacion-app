@@ -262,7 +262,7 @@ function mostrarCampoFaltante() {
 }
 
 function mostrarTitulos() {
-  titulo.textContent = `Elecciones ${periodosSelect.value} | Generales`;
+  titulo.textContent = `Elecciones ${periodosSelect.value} | Paso`;
   subtitulo.textContent = `${añoSeleccionado}>Generales>${cargoSeleccionado}>${distritoSeleccionado}>${seccionSeleccionada}`;
   titulo.style.visibility = "visible";
   subtitulo.style.visibility = "visible";
