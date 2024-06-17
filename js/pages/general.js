@@ -121,48 +121,48 @@ function completarCuadroAgrupaciones() {
 
   if (agrupaciones) {
     agrupaciones.forEach((agrupacion) => {
-      const divAgrupacion = document.createElement("div");
+      let divAgrupacion = document.createElement("div");
       divAgrupacion.classList.add("agrupacion");
 
-      const h4Titulo = document.createElement("h4");
+      let h4Titulo = document.createElement("h4");
       h4Titulo.classList.add("titulo-agrupaciones");
 
       h4Titulo.textContent = agrupacion.nombreAgrupacion;
 
       divAgrupacion.appendChild(h4Titulo);
 
-      const divPartido = document.createElement("div"); //crea el div el partido//
+      let divPartido = document.createElement("div"); //crea el div el partido//
       divPartido.classList.add("partido"); //lo añade a la clase partido//
 
-      const p1Partido = document.createElement("p"); // crea el <p> donde va el nombre de la lista//
+      let p1Partido = document.createElement("p"); // crea el <p> donde va el nombre de la lista//
       p1Partido.textContent = agrupacion.nombreAgrupacion; // agrega el nombre de la lista al <p>//
 
-      const spanP1Partido = document.createElement("span"); //crea el span donve va el porcentaje de votos//
-      const porcentajeVotos = `${agrupacion.votosPorcentaje}%`; // calculo el porcentaje y hago que solo tenga 2 decimales//
+      let spanP1Partido = document.createElement("span"); //crea el span donve va el porcentaje de votos//
+      let porcentajeVotos = `${agrupacion.votosPorcentaje}%`; // calculo el porcentaje y hago que solo tenga 2 decimales//
       spanP1Partido.textContent = porcentajeVotos; // agrega el porcentaje//
       spanP1Partido.classList.add("porcentajes"); //agrega el span a la clase porcentajes//
 
-      const p2Partido = document.createElement("p"); //crea el elemnto <p> que va acontener el span con los votos//
+      let p2Partido = document.createElement("p"); //crea el elemnto <p> que va acontener el span con los votos//
 
-      const spanP2Partido = document.createElement("span"); // crea el span donve van los votos//
+      let spanP2Partido = document.createElement("span"); // crea el span donve van los votos//
       spanP2Partido.textContent = `${agrupacion.votos} votos`; // formateo los votos para que se vean asi "XXX votos" //
       spanP2Partido.classList.add("porcentajes"); //agrega el span a la clase porcentajes//
 
-      const divBarra = document.createElement("div"); // crea el div que tiene el fondo de la barra de progreso//
+      let divBarra = document.createElement("div"); // crea el div que tiene el fondo de la barra de progreso//
       divBarra.classList.add("progress"); //agrega el div a la clase progress//
 
-      const idAgrupacion = agrupacion.idAgrupacion.toString(); //convierte el id de la agrupacion en string
+      let idAgrupacion = agrupacion.idAgrupacion.toString(); //convierte el id de la agrupacion en string
       divBarra.style.background =
         agrupacionesYColores[idAgrupacion].colorLiviano; //busca el id de la agrupacion en la lista de agrupacion y colores y extra el color para el fondo de la barra
 
-      const divProgresoBarra = document.createElement("div"); // crea el div que tiene la barra de progreso//
+      let divProgresoBarra = document.createElement("div"); // crea el div que tiene la barra de progreso//
       divProgresoBarra.classList.add("progress-bar"); //agrega el div a la clase progress-bar//
 
       divProgresoBarra.style.background =
         agrupacionesYColores[idAgrupacion].colorPleno; //busca el id de la agrupacion en la lista de agrupacion y colores y extra el color para la barra
       divProgresoBarra.style.width = porcentajeVotos; //le da a la barra un ancho igual al porcentaje de votos
 
-      const spanDivProgresoBarra = document.createElement("span"); // crea el span de adentro de la barra que dice el porcentaje//
+      let spanDivProgresoBarra = document.createElement("span"); // crea el span de adentro de la barra que dice el porcentaje//
       spanDivProgresoBarra.textContent = porcentajeVotos; // agrega el porcentaje al span//
       spanDivProgresoBarra.classList.add("progress-bar-text"); // agrega el span a la clase progress-bar-text//
 
