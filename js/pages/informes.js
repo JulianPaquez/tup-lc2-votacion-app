@@ -14,7 +14,7 @@ let resultados = "";
 document.addEventListener("DOMContentLoaded", async () => {
   if (localStorage.getItem("INFORMES")) {
     informes = JSON.parse(localStorage.getItem("INFORMES"));
-    const promises = informes.forEach((informe) => {
+    /*const promises =*/ informes.forEach((informe) => {
       url = armarUrl(informe);
       return consultarResultados(url, informe);
     });
@@ -64,7 +64,7 @@ async function consultarResultados(url, informe) {
 
     if (response.ok) {
       mensajeCargando.style.visibility = "hidden";
-      const resultados = await response.json();
+      let resultados = response.json();
       console.log(resultados);
       crearInforme(resultados, informe);
     } else {
@@ -82,6 +82,131 @@ async function consultarResultados(url, informe) {
 }
 
 function crearInforme(resultados, informe) {
+  let datos = informe.split("|");
+  let eleccion = datos[2] === "1" ? "Paso" : "Generales";
+
+  let tr = document.createElement("tr");
+
+  let tdProvincia = document.createElement("td");
+  cambiarImagenProvincia(tdProvincia, informe);
+
+  let tdEleccion = document.createElement("td");
+  let h4Eleccion = document.createElement("h4");
+  h4Eleccion.textContent = `Elecciones ${datos[0]} | ${eleccion}`;
+
+  let pEleccion = document.createElement("p");
+  pEleccion.classList.add("texto-path");
+  pEleccion.textContent = `${datos[0]}>${eleccion}>${datos[10]}>${datos[11]}>${datos[12]}`;
+
+  tdEleccion.appendChild(h4Eleccion);
+  tdEleccion.appendChild(pEleccion);
+
+  let tdCuadritos = document.createElement("td");
+  let nuevoCuadritos = document.getElementById("cuadritos").cloneNode(true);
+  let spansDentroDeCuadritos = nuevoCuadritos.querySelectorAll("span");
+
+  spansDentroDeCuadritos[0].textContent = `Mesas Escrutadas ${resultados.estadoRecuento.mesasTotalizadas}`;
+  spansDentroDeCuadritos[1].textContent = `Electores ${resultados.estadoRecuento.cantidadElectores}`;
+  spansDentroDeCuadritos[2].innerHTML = `Participacion sobre escrutado <br> ${resultados.estadoRecuento.participacionPorcentaje}%`;
+
+  nuevoCuadritos.style.visibility = "visible";
+  tdCuadritos.appendChild(nuevoCuadritos);
+
+  let tdDatos = document.createElement("td");
+  resultados.valoresTotalizadosPositivos.forEach(
+    (
+      agrupacion
+    ) => /*=> sirve para definir funciones flecha (arrow functions).*/ {
+      let p1Partido = document.createElement("p");
+      p1Partido.textContent = agrupacion.nombreAgrupacion;
+
+      let spanP1Partido = document.createElement("span");
+      spanP1Partido.textContent = `${agrupacion.votosPorcentaje}%`;
+      spanP1Partido.classList.add("porcentajes");
+
+      let p2Partido = document.createElement("p");
+
+      let spanP2Partido = document.createElement("span");
+      spanP2Partido.textContent = `${agrupacion.votos} votos`;
+      spanP2Partido.classList.add("porcentajes");
+
+      tdDatos.appendChild(p1Partido);
+      tdDatos.appendChild(p2Partido);
+
+      p1Partido.appendChild(spanP1Partido);
+      p2Partido.appendChild(spanP2Partido);
+    }
+  );
+
+  tr.appendChild(tdProvincia);
+  tr.appendChild(tdEleccion);
+  tr.appendChild(tdCuadritos);
+  tr.appendChild(tdDatos);
+
+  informesContainer.appendChild(tr);
+}
+
+/* function crearInforme(resultados, informe) {
+  const datos = informe.split("|");
+  const eleccion = datos[2] === "1" ? "Paso" : "Generales";
+
+  const tr = document.createElement("tr");
+
+  const tdProvincia = document.createElement("td");
+  cambiarImagenProvincia(tdProvincia, informe);
+
+  const tdEleccion = document.createElement("td");
+  const h4Eleccion = document.createElement("h4");
+  h4Eleccion.textContent = `Elecciones ${datos[0]} | ${eleccion}`;
+
+  const pEleccion = document.createElement("p");
+  pEleccion.classList.add("texto-path");
+  pEleccion.textContent = `${datos[0]}>${eleccion}>${datos[10]}>${datos[11]}>${datos[12]}`;
+
+  tdEleccion.appendChild(h4Eleccion);
+  tdEleccion.appendChild(pEleccion);
+
+  const tdCuadritos = document.createElement("td");
+  const nuevoCuadritos = document.getElementById("cuadritos").cloneNode(true);
+  const spansDentroDeCuadritos = nuevoCuadritos.querySelectorAll("span");
+
+  spansDentroDeCuadritos[0].textContent = `Mesas Escrutadas ${resultados.estadoRecuento.mesasTotalizadas}`;
+  spansDentroDeCuadritos[1].textContent = `Electores ${resultados.estadoRecuento.cantidadElectores}`;
+  spansDentroDeCuadritos[2].innerHTML = `Participacion sobre escrutado <br> ${resultados.estadoRecuento.participacionPorcentaje}%`;
+
+  nuevoCuadritos.style.visibility = "visible";
+  tdCuadritos.appendChild(nuevoCuadritos);
+
+  const tdDatos = document.createElement("td");
+  resultados.valoresTotalizadosPositivos.forEach((agrupacion) => {
+    const p1Partido = document.createElement("p");
+    p1Partido.textContent = agrupacion.nombreAgrupacion;
+
+    const spanP1Partido = document.createElement("span");
+    spanP1Partido.textContent = `${agrupacion.votosPorcentaje}%`;
+    spanP1Partido.classList.add("porcentajes");
+
+    const p2Partido = document.createElement("p");
+
+    const spanP2Partido = document.createElement("span");
+    spanP2Partido.textContent = `${agrupacion.votos} votos`;
+    spanP2Partido.classList.add("porcentajes");
+
+    tdDatos.appendChild(p1Partido);
+    tdDatos.appendChild(p2Partido);
+
+    p1Partido.appendChild(spanP1Partido);
+    p2Partido.appendChild(spanP2Partido);
+  });
+
+  tr.appendChild(tdProvincia);
+  tr.appendChild(tdEleccion);
+  tr.appendChild(tdCuadritos);
+  tr.appendChild(tdDatos);
+
+  informesContainer.appendChild(tr);
+} */
+/*function crearInforme(resultados, informe) {
   let datos = informe.split("|");
 
   let anioEleccion = datos[0];
@@ -169,7 +294,7 @@ function crearInforme(resultados, informe) {
   } catch (error) {
     console.log("No se creo el informe porque el resultado esta vacio");
   }
-}
+}*/
 
 function ocultarMensajes() {
   mensajeCargando.style.visibility = "hidden";

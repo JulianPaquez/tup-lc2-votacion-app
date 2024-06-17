@@ -39,6 +39,15 @@
   font-size: 12px;
   vertical-align: top;
   text-align: center;
+  display: flex; /* Agregamos esta propiedad para centrar verticalmente */
+  align-items: center; /* Agregamos esta propiedad para centrar verticalmente */
+  height: 100px; /* Agregamos un alto fijo para que el centrado funcione */
+  /*  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid var(--borde-inferior-Grilla);
+  padding: 15px 0;
+  font-size: 12px;
+  vertical-align: top;
+  text-align: center; */
 }
 
 /* Estilos de la columna PROVINCIA */

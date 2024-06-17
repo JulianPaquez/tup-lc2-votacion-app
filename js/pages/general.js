@@ -304,7 +304,7 @@ async function consultarResultados() {
       const response = await fetch(url + parametros);
       if (response.ok) {
         mensajeCargando.style.visibility = "hidden";
-        resultados = await response.json();
+        resultados = response.json();
         console.log(resultados);
         mostrarTitulos();
         cambiarImagenProvincia();
@@ -351,7 +351,7 @@ function cargarSeccion() {
             if (distrito.IdDistrito == distritosSelect.value) {
               distrito.SeccionesProvinciales.forEach((seccionProvincial) => {
                 inputSeccionProvincial.id =
-                  seccionProvincial.IDSeccionProvincial; // da error porque el id es null
+                  seccionProvincial.IDSeccionProvincial;
                 seccionProvincial.Secciones.forEach((seccion) => {
                   const option = document.createElement("option");
                   option.value = seccion.IdSeccion;
@@ -395,7 +395,7 @@ async function consultarAños() {
     const response = await fetch(url);
 
     if (response.ok) {
-      const años = await response.json();
+      const años = response.json();
       años.forEach((item) => {
         const option = document.createElement("option");
         option.value = item;
@@ -432,7 +432,7 @@ async function consultarDatos() {
       limpiarSelect(distritosSelect);
       limpiarSelect(seccionSelect);
 
-      datosElecciones = await response.json();
+      datosElecciones = response.json();
       datosElecciones.forEach((eleccion) => {
         if (eleccion.IdEleccion == tipoEleccion) {
           eleccion.Cargos.forEach((cargo) => {
