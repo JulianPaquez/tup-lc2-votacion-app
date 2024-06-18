@@ -290,7 +290,7 @@ function cambiarImagenProvincia() {
 async function consultarResultados() {
   if (validarSelects()) {
     ocultarMensajes();
-    const url = `https://resultados.mininterior.gob.ar/api/resultados/getResultados`;
+    const url = `https://elecciones-lc2.bruselario.com/api/resultados/getResultados`;
     let anioEleccion = periodosSelect.value;
     let categoriaId = cargosSelect.value;
     let distritoId = distritosSelect.value;
@@ -390,7 +390,7 @@ function cargarDistritos() {
 }
 
 async function consultarAños() {
-  const url = `https://resultados.mininterior.gob.ar/api/menu/periodos`;
+  const url = `https://elecciones-lc2.bruselario.com/api/menu/periodos`;
   try {
     const response = await fetch(url);
 
@@ -423,7 +423,7 @@ async function consultarAños() {
 async function consultarDatos() {
   añoSeleccionado =
     periodosSelect.options[periodosSelect.selectedIndex].textContent;
-  const url = "https://resultados.mininterior.gob.ar/api/menu?año=";
+  const url = "https://elecciones-lc2-bruselario.com/api/menu?año=";
   try {
     const response = await fetch(url + periodosSelect.value);
 

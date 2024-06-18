@@ -51,7 +51,7 @@ function armarUrl(informe) {
   let distritoSeleccionado = datos[11];
   let seccionSeleccionada = datos[12];
 
-  let urlSinParametros = `https://resultados.mininterior.gob.ar/api/resultados/getResultados`;
+  let urlSinParametros = `https://elecciones-lc2.bruselario.com/api/resultados/getResultados`;
   let parametros = `?anioEleccion=${anioEleccion}&tipoRecuento=${tipoRecuento}&tipoEleccion=${tipoEleccion}&categoriaId=${categoriaId}&distritoId=${distritoId}&seccionProvincialId=${seccionProvincialId}&seccionId=${seccionId}&circuitoId=${circuitoId}&mesaId=${mesaId}`;
   let url = urlSinParametros + parametros;
   return url;
