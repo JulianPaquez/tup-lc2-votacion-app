@@ -114,71 +114,62 @@ function crearListaAgrupacionesYColores() {
 }
 
 function completarCuadroAgrupaciones() {
-  let agrupaciones = resultados.valoresTotalizadosPositivos.sort(
+  const agrupaciones = resultados.valoresTotalizadosPositivos.sort(
     (a, b) => b.votos - a.votos
   );
+
   removerHijos(cuadroAgrupaciones);
 
   if (agrupaciones) {
     agrupaciones.forEach((agrupacion) => {
-      let divAgrupacion = document.createElement("div");
+      const divAgrupacion = document.createElement("div");
       divAgrupacion.classList.add("agrupacion");
 
-      let h4Titulo = document.createElement("h4");
+      const h4Titulo = document.createElement("h4");
       h4Titulo.classList.add("titulo-agrupaciones");
-
       h4Titulo.textContent = agrupacion.nombreAgrupacion;
-
       divAgrupacion.appendChild(h4Titulo);
 
-      let divPartido = document.createElement("div"); //crea el div el partido//
-      divPartido.classList.add("partido"); //lo añade a la clase partido//
+      const divPartido = document.createElement("div");
+      divPartido.classList.add("partido");
 
-      let p1Partido = document.createElement("p"); // crea el <p> donde va el nombre de la lista//
-      p1Partido.textContent = agrupacion.nombreAgrupacion; // agrega el nombre de la lista al <p>//
+      const p1Partido = document.createElement("p");
+      p1Partido.textContent = agrupacion.nombreAgrupacion;
 
-      let spanP1Partido = document.createElement("span"); //crea el span donve va el porcentaje de votos//
-      let porcentajeVotos = `${agrupacion.votosPorcentaje}%`; // calculo el porcentaje y hago que solo tenga 2 decimales//
-      spanP1Partido.textContent = porcentajeVotos; // agrega el porcentaje//
-      spanP1Partido.classList.add("porcentajes"); //agrega el span a la clase porcentajes//
-
-      let p2Partido = document.createElement("p"); //crea el elemnto <p> que va acontener el span con los votos//
-
-      let spanP2Partido = document.createElement("span"); // crea el span donve van los votos//
-      spanP2Partido.textContent = `${agrupacion.votos} votos`; // formateo los votos para que se vean asi "XXX votos" //
-      spanP2Partido.classList.add("porcentajes"); //agrega el span a la clase porcentajes//
-
-      let divBarra = document.createElement("div"); // crea el div que tiene el fondo de la barra de progreso//
-      divBarra.classList.add("progress"); //agrega el div a la clase progress//
-
-      let idAgrupacion = agrupacion.idAgrupacion.toString(); //convierte el id de la agrupacion en string
-      divBarra.style.background =
-        agrupacionesYColores[idAgrupacion].colorLiviano; //busca el id de la agrupacion en la lista de agrupacion y colores y extra el color para el fondo de la barra
-
-      let divProgresoBarra = document.createElement("div"); // crea el div que tiene la barra de progreso//
-      divProgresoBarra.classList.add("progress-bar"); //agrega el div a la clase progress-bar//
-
-      divProgresoBarra.style.background =
-        agrupacionesYColores[idAgrupacion].colorPleno; //busca el id de la agrupacion en la lista de agrupacion y colores y extra el color para la barra
-      divProgresoBarra.style.width = porcentajeVotos; //le da a la barra un ancho igual al porcentaje de votos
-
-      let spanDivProgresoBarra = document.createElement("span"); // crea el span de adentro de la barra que dice el porcentaje//
-      spanDivProgresoBarra.textContent = porcentajeVotos; // agrega el porcentaje al span//
-      spanDivProgresoBarra.classList.add("progress-bar-text"); // agrega el span a la clase progress-bar-text//
-
-      divPartido.appendChild(p1Partido);
-      divPartido.appendChild(p2Partido);
-      divPartido.appendChild(divBarra);
-
+      const spanP1Partido = document.createElement("span");
+      const porcentajeVotos = `${agrupacion.votosPorcentaje}%`;
+      spanP1Partido.textContent = porcentajeVotos;
+      spanP1Partido.classList.add("porcentajes");
       p1Partido.appendChild(spanP1Partido);
-      p2Partido.appendChild(spanP2Partido);
+      divPartido.appendChild(p1Partido);
 
-      divBarra.appendChild(divProgresoBarra);
+      const p2Partido = document.createElement("p");
+      const spanP2Partido = document.createElement("span");
+      spanP2Partido.textContent = `${agrupacion.votos} votos`;
+      spanP2Partido.classList.add("porcentajes");
+      p2Partido.appendChild(spanP2Partido);
+      divPartido.appendChild(p2Partido);
+
+      const divBarra = document.createElement("div");
+      divBarra.classList.add("progress");
+      divBarra.style.background =
+        agrupacionesYColores[agrupacion.idAgrupacion.toString()].colorLiviano;
+
+      const divProgresoBarra = document.createElement("div");
+      divProgresoBarra.classList.add("progress-bar");
+      divProgresoBarra.style.background =
+        agrupacionesYColores[agrupacion.idAgrupacion.toString()].colorPleno;
+      divProgresoBarra.style.width = porcentajeVotos;
+
+      const spanDivProgresoBarra = document.createElement("span");
+      spanDivProgresoBarra.textContent = porcentajeVotos;
+      spanDivProgresoBarra.classList.add("progress-bar-text");
 
       divProgresoBarra.appendChild(spanDivProgresoBarra);
+      divBarra.appendChild(divProgresoBarra);
+      divPartido.appendChild(divBarra);
 
       divAgrupacion.appendChild(divPartido);
-
       cuadroAgrupaciones.appendChild(divAgrupacion);
     });
   }
