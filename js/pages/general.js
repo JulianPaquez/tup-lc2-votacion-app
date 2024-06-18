@@ -1,25 +1,25 @@
 const tipoEleccion = 2;
 const tipoRecuento = 1;
-const periodosSelect = document.getElementById("año");
-const cargosSelect = document.getElementById("cargo");
-const distritosSelect = document.getElementById("distrito");
-const seccionSelect = document.getElementById("seccion");
-const inputSeccionProvincial = document.getElementById("hdSeccionProvincial");
-const botonFiltrar = document.getElementById("filtrar");
-const titulo = document.getElementById("titulo");
-const subtitulo = document.getElementById("subtitulo");
-const contenido = document.getElementById("sec-contenido");
-const mensajeAmarillo = document.getElementById("mensaje-amarillo");
-const mensajeVerde = document.getElementById("mensaje-verde");
-const mensajeRojo = document.getElementById("mensaje-rojo");
-const mensajeCargando = document.getElementById("mensaje-cargando");
-const cuadroMesas = document.getElementById("cuadro-mesas");
-const cuadroElectores = document.getElementById("cuadro-electores");
-const cuadroParticipacion = document.getElementById("cuadro-participacion");
-const svgContainer = document.getElementById("svg-container");
-const cuadroAgrupaciones = document.getElementById("cuadro-agrupaciones");
-const cuadroResumenVotos = document.getElementById("cuadro-resumen");
-const botonAgregarInforme = document.getElementById("agregar-informe");
+let periodosSelect = document.getElementById("año");
+let cargosSelect = document.getElementById("cargo");
+let distritosSelect = document.getElementById("distrito");
+let seccionSelect = document.getElementById("seccion");
+let inputSeccionProvincial = document.getElementById("hdSeccionProvincial");
+let botonFiltrar = document.getElementById("filtrar");
+let titulo = document.getElementById("titulo");
+let subtitulo = document.getElementById("subtitulo");
+let contenido = document.getElementById("sec-contenido");
+let mensajeAmarillo = document.getElementById("mensaje-amarillo");
+let mensajeVerde = document.getElementById("mensaje-verde");
+let mensajeRojo = document.getElementById("mensaje-rojo");
+let mensajeCargando = document.getElementById("mensaje-cargando");
+let cuadroMesas = document.getElementById("cuadro-mesas");
+let cuadroElectores = document.getElementById("cuadro-electores");
+let cuadroParticipacion = document.getElementById("cuadro-participacion");
+let svgContainer = document.getElementById("svg-container");
+let cuadroAgrupaciones = document.getElementById("cuadro-agrupaciones");
+let cuadroResumenVotos = document.getElementById("cuadro-resumen");
+let botonAgregarInforme = document.getElementById("agregar-informe");
 
 let añoSeleccionado = "";
 let cargoSeleccionado = "";
@@ -263,11 +263,11 @@ function cambiarImagenProvincia() {
   );
 
   if (provincia) {
-    const h3Provincia = document.createElement("h3");
+    let h3Provincia = document.createElement("h3");
     h3Provincia.textContent = provincia.provincia;
     h3Provincia.classList.add("titulo-cuadros", "titulo-provincias");
 
-    const divSvg = document.createElement("div");
+    let divSvg = document.createElement("div");
     divSvg.innerHTML = provincia.svg;
     divSvg.classList.add("contenedor-provincia");
 
