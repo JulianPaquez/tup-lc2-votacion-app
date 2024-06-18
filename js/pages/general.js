@@ -114,7 +114,7 @@ function crearListaAgrupacionesYColores() {
 }
 
 function completarCuadroAgrupaciones() {
-  const agrupaciones = resultados.valoresTotalizadosPositivos.sort(
+  let agrupaciones = resultados.valoresTotalizadosPositivos.sort(
     (a, b) => b.votos - a.votos
   );
 
@@ -122,46 +122,46 @@ function completarCuadroAgrupaciones() {
 
   if (agrupaciones) {
     agrupaciones.forEach((agrupacion) => {
-      const divAgrupacion = document.createElement("div");
+      let divAgrupacion = document.createElement("div");
       divAgrupacion.classList.add("agrupacion");
 
-      const h4Titulo = document.createElement("h4");
+      let h4Titulo = document.createElement("h4");
       h4Titulo.classList.add("titulo-agrupaciones");
       h4Titulo.textContent = agrupacion.nombreAgrupacion;
       divAgrupacion.appendChild(h4Titulo);
 
-      const divPartido = document.createElement("div");
+      let divPartido = document.createElement("div");
       divPartido.classList.add("partido");
 
-      const p1Partido = document.createElement("p");
+      let p1Partido = document.createElement("p");
       p1Partido.textContent = agrupacion.nombreAgrupacion;
 
-      const spanP1Partido = document.createElement("span");
-      const porcentajeVotos = `${agrupacion.votosPorcentaje}%`;
+      let spanP1Partido = document.createElement("span");
+      let porcentajeVotos = `${agrupacion.votosPorcentaje}%`;
       spanP1Partido.textContent = porcentajeVotos;
       spanP1Partido.classList.add("porcentajes");
       p1Partido.appendChild(spanP1Partido);
       divPartido.appendChild(p1Partido);
 
-      const p2Partido = document.createElement("p");
-      const spanP2Partido = document.createElement("span");
+      let p2Partido = document.createElement("p");
+      let spanP2Partido = document.createElement("span");
       spanP2Partido.textContent = `${agrupacion.votos} votos`;
       spanP2Partido.classList.add("porcentajes");
       p2Partido.appendChild(spanP2Partido);
       divPartido.appendChild(p2Partido);
 
-      const divBarra = document.createElement("div");
+      let divBarra = document.createElement("div");
       divBarra.classList.add("progress");
       divBarra.style.background =
         agrupacionesYColores[agrupacion.idAgrupacion.toString()].colorLiviano;
 
-      const divProgresoBarra = document.createElement("div");
+      let divProgresoBarra = document.createElement("div");
       divProgresoBarra.classList.add("progress-bar");
       divProgresoBarra.style.background =
         agrupacionesYColores[agrupacion.idAgrupacion.toString()].colorPleno;
       divProgresoBarra.style.width = porcentajeVotos;
 
-      const spanDivProgresoBarra = document.createElement("span");
+      let spanDivProgresoBarra = document.createElement("span");
       spanDivProgresoBarra.textContent = porcentajeVotos;
       spanDivProgresoBarra.classList.add("progress-bar-text");
 
